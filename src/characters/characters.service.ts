@@ -26,8 +26,6 @@ export class CharacterService{
         }
     }
 
-    //fiz uma alteração aqui
-
     async update(id: string, updateCharDto: UpdateCharacterDto): Promise<Character>{
         try{
             return await this.characterModel.findByIdAndUpdate(id, updateCharDto, {new: true});
