@@ -12,6 +12,9 @@ export class Character{
     @Prop()
     class: string;
 
+    @Prop()
+    race: string;
+
     @Prop(raw({
         str: { type: Number },
         dex: { type: Number },
@@ -23,7 +26,7 @@ export class Character{
     attributes: Record<string, any>;
 
     @Prop()
-    feats: string;
+    feats: string[];
 
     @Prop()
     alignment: string;
