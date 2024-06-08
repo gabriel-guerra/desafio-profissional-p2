@@ -1,73 +1,40 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Dicas de desenvolvimento
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+1. Baixem o GitHub desktop (https://desktop.github.com/)
+2. Instalem e façam o login
+3. Clone o repositório da prova 
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/bb74fba3-1d2e-4d7c-88e5-400d44cb3a69)
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/f84ddc46-5ba7-4747-baf2-7ebcb9f30613)
 
-## Description
+4. Crie uma nova branch para preservar o código principal do projeto
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/d59ef6f8-c44e-4356-a988-be298e161cb9)
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/719b6250-d614-4411-86e1-321ee0a85c57)
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/7017fb91-7777-4191-9bf2-0413944f70a0)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+5. Abra onde a pasta do repositório foi criada, e arraste no VS Code para abri-la
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/67c2a147-78a6-4793-ac71-7537a13cafb6)
 
-## Installation
+6. Quando você fizer uma alteração e salvar o arquivo, o git irá processar a mudança
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/217f9c01-ea60-4ab1-ac5d-dee2bba39d69)
 
-```bash
-$ npm install
-```
+7. Quando a mudança estiver pronta, crie um nome e uma descrição para o commit, depois clique no botão `commit to`\
+**LEMBRE DE NÃO COMITAR DIRETAMENTE NA MAIN**
 
-## Running the app
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/c0b3cf1b-7c75-4f55-b17c-9835f65bd6a4)
 
-```bash
-# development
-$ npm run start
+8. Depois do commit, faça o push das mudanças
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/662b997f-59cb-458f-b723-a89c7b4a3074)
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
+9. Quando as alterações estiverem prontas, crie um `pull request` para iniciar o processo de incorporação das novas funcionalidades a main\
+Se quiser, pode colocar o @gabriel-guerra como reviewer do pull request
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/61907b17-d826-4f92-8fb3-1d997eb9c2d3)
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/f7010021-10df-49b5-9dc0-10e549ae15dd)
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/76527f7d-57a5-4d1e-864e-bb523bdb6bf8)
 
-## Test
+10. O pull request permite que código não seja sobrescrito
+![image](https://github.com/gabriel-guerra/desafio-profissional-p2/assets/159430864/4e574e49-9225-4ed3-9750-e8522c3affa4)
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
