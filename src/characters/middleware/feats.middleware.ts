@@ -36,7 +36,6 @@ export class FeatsMiddleware implements NestMiddleware {
         console.error('Erro ao processar escolha:', error.message);
       }
     }
-
     // Fim da execução do middleware
     next();
   }
