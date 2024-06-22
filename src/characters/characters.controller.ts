@@ -1,9 +1,12 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpException, HttpStatus, Param, Post } from "@nestjs/common";
+import { Body, Controller, Delete, Get, HttpCode, HttpException, HttpStatus, Param, Post, UseGuards } from "@nestjs/common";
 import { CreateCharacterDto } from "./dto/create-character.dto";
 import { Character } from "./schemas/character.schema";
 import { CharacterService } from "./characters.service";
 import { UpdateCharacterDto } from "./dto/update-character.dto";
+import { AuthGuard } from "src/auth/auth.guard";
+import { NotUpdatedException } from "./exceptions/not-updated-exception";
 
+@UseGuards(AuthGuard)
 @Controller('character')
 export class CharacterController{
     constructor(private readonly characterService: CharacterService){}
@@ -13,7 +16,7 @@ export class CharacterController{
         try{
             return this.characterService.create(createCharDto)
         }catch(e){
-            throw new HttpException({}, HttpStatus.INTERNAL_SERVER_ERROR)
+            throw new HttpException({}, HttpStatus.BAD_REQUEST)
         }
     }
 
@@ -22,7 +25,7 @@ export class CharacterController{
         try{
             return this.characterService.findAll();
         }catch(e){
-            throw new HttpException({}, HttpStatus.INTERNAL_SERVER_ERROR)
+            throw new HttpException({}, HttpStatus.NOT_FOUND)
         }
     }
 
@@ -31,7 +34,7 @@ export class CharacterController{
         try{
             return this.characterService.findById(id)
         }catch(e){
-            throw new HttpException({}, HttpStatus.INTERNAL_SERVER_ERROR)
+            throw new HttpException({}, HttpStatus.NOT_FOUND)
         }
     }
 
@@ -41,7 +44,7 @@ export class CharacterController{
         try{
             return this.characterService.update(id, updateCatDto);
         }catch(e){
-            throw new HttpException({}, HttpStatus.INTERNAL_SERVER_ERROR)
+            throw new NotUpdatedException();
         }
     }
 
