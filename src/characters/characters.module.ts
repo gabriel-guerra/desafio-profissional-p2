@@ -1,4 +1,4 @@
-import { MiddlewareConsumer, Module } from "@nestjs/common";
+import { MiddlewareConsumer, Module, RequestMethod } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
 import { Character, CharacterShema } from "./schemas/character.schema";
 import { CharacterController } from "./characters.controller";
@@ -19,6 +19,6 @@ import { MagicMiddleware } from "./middleware/magic.middleware";
 export class CharacterModule{
     configure(consumer: MiddlewareConsumer){
         consumer.apply(AlignmentsMiddleware, AttributesMiddleware, FeatsMiddleware, ItemsMiddleware, MagicMiddleware)
-        .forRoutes('character*');
+        .forRoutes({path: 'character*',  method: RequestMethod.POST});
     }
 }
