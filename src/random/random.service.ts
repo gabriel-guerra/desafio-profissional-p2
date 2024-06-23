@@ -10,7 +10,7 @@ export class RandomService{
 
         //const charClass = random.classes[this.randomizeIndexes(random.classes.length)];
         const charClass = 'wizard';
-        const level = 13//this.randomizeIndexes(20);
+        const level = 15//this.randomizeIndexes(20);
         
         let magic = await this.randomizeSpells(level, charClass);
         if (!magic) magic = []
@@ -102,31 +102,32 @@ export class RandomService{
     }
 
     async randomizeSpells(level: number, className: string): Promise<string[]> {
-        
         try {
             const response = await axios.get('https://www.dnd5eapi.co/api/spells');
             const allSpells = response.data.results;
-        
-            const filteredSpellsUrls = allSpells.filter((spell: { url: string }) => spell.url);
-            const spellsPromises = filteredSpellsUrls.map((spell: { url: string }) => axios.get(`https://www.dnd5eapi.co${spell.url}`));
+
+            const spellsPromises = allSpells.map((spell: { url: string }) => axios.get(`https://www.dnd5eapi.co${spell.url}`));
             const spellsResponses = await Promise.all(spellsPromises);
-        
-            const filteredSpells = spellsResponses.map(res => res.data).filter((spell: any) => {
-            return spell.level === level && spell.classes.some(c => c.name.toLowerCase() === className.toLowerCase());
+            const spellsData = spellsResponses.map(res => res.data);
+
+            const filteredSpells = spellsData.filter((spell: any) => {
+                return spell.classes.some((c: { name: string }) => c.name.toLowerCase() === className.toLowerCase())
+                    && spell.level <= level;
             });
-        
+
             if (filteredSpells.length === 0) {
-            console.log(`No spells found for level ${level} and class ${className}`);
-            return null;
+                console.log(`No spells found for level ${level} and class ${className}`);
+                return [];
             }
-        
-            const randomSpell = filteredSpells[Math.floor(Math.random() * filteredSpells.length)];
-        
-            return randomSpell.name;
+
+            const randomIndex = Math.floor(Math.random() * filteredSpells.length);
+            const randomSpell = filteredSpells[randomIndex].name;
+
+            return [randomSpell]; // Retorna um array com o nome do feitiço
         } catch (error) {
             console.error('Error fetching spells:', error);
-            return null;
+            return [];
         }
-    }     
+    }
 
 }
