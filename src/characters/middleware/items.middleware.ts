@@ -9,7 +9,6 @@ export class ItemsMiddleware implements NestMiddleware {
       const characterClass = req.body.class.toLowerCase();
       const items = req.body.items.map(item => item.toLowerCase());
 
-      // Obter itens permitidos e itens iniciais da classe
       const { allowedItems, choiceGroups } = await this.getAllowedItemsForClass(characterClass);
       const initialItems = await this.getInitialItemsForClass(characterClass);
 
@@ -20,13 +19,11 @@ export class ItemsMiddleware implements NestMiddleware {
       const invalidItems = [];
       const chosenItems = new Set<string>();
 
-      // Verificar se os itens recebidos estão entre os permitidos e se apenas uma escolha foi feita por conjunto de opções
       for (const item of items) {
         const itemExists = allowedItems.includes(item) || initialItems.includes(item);
         if (!itemExists) {
           invalidItems.push(item);
         } else if (allowedItems.includes(item)) {
-          // Verifica se o item pertence a algum grupo de escolha
           const group = choiceGroups.find(group => group.includes(item));
           if (group) {
             const alreadyChosenItem = [...chosenItems].find(chosenItem => group.includes(chosenItem));
@@ -39,7 +36,6 @@ export class ItemsMiddleware implements NestMiddleware {
         }
       }
 
-      // Verificar se os itens iniciais obrigatórios estão presentes
       for (const initialItem of initialItems) {
         if (!items.includes(initialItem)) {
           invalidItems.push(initialItem);

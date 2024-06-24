@@ -16,7 +16,7 @@ export class CharacterController{
         try{
             return this.characterService.create(createCharDto)
         }catch(e){
-            throw new HttpException({}, HttpStatus.BAD_REQUEST)
+            throw new HttpException({"message": 'Erro ao criar personagem'}, HttpStatus.BAD_REQUEST)
         }
     }
 
@@ -53,9 +53,8 @@ export class CharacterController{
         try{
             return this.characterService.delete(id);
         }catch(e){
-            throw new HttpException({}, HttpStatus.INTERNAL_SERVER_ERROR)
+            throw new HttpException({"message": "Erro ao excluir personagem"}, HttpStatus.INTERNAL_SERVER_ERROR)
         }
     }
-
 
 }
