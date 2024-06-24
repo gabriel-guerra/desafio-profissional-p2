@@ -8,9 +8,8 @@ export class RandomService{
 
     async generate(): Promise<CreateCharacterDto>{
 
-        //const charClass = random.classes[this.randomizeIndexes(random.classes.length)];
-        const charClass = 'wizard';
-        const level = 15//this.randomizeIndexes(20);
+        const charClass = random.classes[this.randomizeIndexes(random.classes.length)];
+        const level = this.randomizeIndexes(20);
         
         let magic = await this.randomizeSpells(level, charClass);
         if (!magic) magic = []
