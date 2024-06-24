@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "e6d5235c-83ab-4647-938e-f02113e075b4",
+		"name": "d5p2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30809794"
+	},
+	"item": [
+		{
+			"name": "char",
+			"item": [
+				{
+					"name": "create character",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2Njc4OWE3MTI0YjBkMzM2NzcyOWJkNmQiLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzE5MTc5OTUwLCJleHAiOjE3MTkxODM1NTB9.C9UZQnfQrnNmALySMAiv5v-RxDqwRVosGrhOUE2hT4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Eldric\",\r\n  \"level\": 5,\r\n  \"class\": \"wizard\",\r\n  \"race\": \"human\",\r\n  \"attributes\": {\r\n    \"str\": 9,\r\n    \"dex\": 14,\r\n    \"con\": 10,\r\n    \"int\": 13,\r\n    \"wis\": 10,\r\n    \"cha\": 15\r\n  },\r\n  \"feats\": [],\r\n  \"alignment\": \"lawful good\",\r\n  \"magic\": [\"Secret Chest\"],\r\n   \"items\": [\"Spellbook\",\"Dagger\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/character",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"character"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update character",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2Njc4OWE3MTI0YjBkMzM2NzcyOWJkNmQiLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzE5MTc5OTUwLCJleHAiOjE3MTkxODM1NTB9.C9UZQnfQrnNmALySMAiv5v-RxDqwRVosGrhOUE2hT4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"gabriel\",\r\n  \"level\": 5,\r\n  \"class\": \"wizard\",\r\n  \"race\": \"human\",\r\n  \"attributes\": {\r\n    \"str\": 9,\r\n    \"dex\": 14,\r\n    \"con\": 10,\r\n    \"int\": 13,\r\n    \"wis\": 10,\r\n    \"cha\": 15\r\n  },\r\n  \"feats\": [],\r\n  \"alignment\": \"lawful good\",\r\n  \"magic\": [\"Secret Chest\"],\r\n   \"items\": [\"Spellbook\",\"Dagger\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/character/66789b457aad3d7f40a59a0e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"character",
+								"66789b457aad3d7f40a59a0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all characters",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2Njc4OWE3MTI0YjBkMzM2NzcyOWJkNmQiLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzE5MTc5OTUwLCJleHAiOjE3MTkxODM1NTB9.C9UZQnfQrnNmALySMAiv5v-RxDqwRVosGrhOUE2hT4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/character",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"character"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one character",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2Njc4OWE3MTI0YjBkMzM2NzcyOWJkNmQiLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzE5MTc5OTUwLCJleHAiOjE3MTkxODM1NTB9.C9UZQnfQrnNmALySMAiv5v-RxDqwRVosGrhOUE2hT4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/character/66789d4fbf320be5250dc61c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"character",
+								"66789d4fbf320be5250dc61c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete character",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2Njc4OWE3MTI0YjBkMzM2NzcyOWJkNmQiLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzE5MTc5OTUwLCJleHAiOjE3MTkxODM1NTB9.C9UZQnfQrnNmALySMAiv5v-RxDqwRVosGrhOUE2hT4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/character/66789b457aad3d7f40a59a0e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"character",
+								"66789b457aad3d7f40a59a0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create random character",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjY2MDVlMDMyMDk3ZmQzODUxNzQyYTEiLCJ1c2VybmFtZSI6ImdhYnJpZWwiLCJpYXQiOjE3MTkxNzQ2MzMsImV4cCI6MTcxOTE3ODIzM30.KiIImK37makb-_s7rglasHhN78Y5_E3jgl2ngKAZIK4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/random",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"random"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\",\r\n    \"name\": \"System Administrator\",\r\n    \"email\": \"teste@teste.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
