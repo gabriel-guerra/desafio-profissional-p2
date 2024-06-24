@@ -14,3 +14,5 @@ Acadêmicos:
 5. Rota de criação de um usuário
 6. Rota de autenticação do usuário
 7. Copiar o token e utilizar nas demais rotas
+
+[Arquivo postman das chamadas](https://github.com/gabriel-guerra/desafio-profissional-p2/blob/main/d5p2.postman_collection.json)
